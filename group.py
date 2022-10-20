@@ -17,15 +17,16 @@ Nash=Person('Nash',34,{'cousin':'John','landlord':'Zalika'},'chef')
 my_group =[Jill,Zalika,John,Nash]
 
 
+
+# which removes the connection between two people in the group
 def forget(person1, person2):
   pass
 
-# which removes the connection between two people in the group
+# which adds a new person with the given characteristics to the group
 def add_person(name, age, job, relations):
   pass
 
-# which adds a new person with the given characteristics to the group
+# which calculates the mean age for the group
 def average_age():
   pass
-# which calculates the mean age for the group
 
