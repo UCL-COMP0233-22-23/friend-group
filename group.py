@@ -19,7 +19,7 @@ class Friend:
 
 jill = Friend('Jill','26','Biologist',{'Zalika':'friend','John':'partner'})
 zalika = Friend('Zalika','28','Artist',{'Jill':'friend'})
-john = Friend('John','27','Writer'{'Jill':'partner'})
+john = Friend('John','27','Writer',{'Jill':'partner'})
 nash = Friend('Nash','34','Chef',{'John':'cousin','Zalika':'landlord'})
 
 
