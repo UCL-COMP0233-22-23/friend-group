@@ -1,6 +1,7 @@
 """An example of how to represent a group of acquaintances in Python."""
 
 from hashlib import new
+from statistics import mean
 
 
 my_group = {
@@ -58,4 +59,7 @@ def average_age(group):
         age += group[person]['age']
     print('The average age is {0:.2f} years'.format(age/len(group)))
 
-average_age(my_group)
+print('The maximum age is', max([my_group[person]['age'] for person in my_group.keys()]))
+print('The average number of relations among members of the group is {0:.2f}'.format(mean([len(my_group[person]              ['connections']) for person in my_group.keys()])))
+print('The maximum age of people in the group that have at least one relation is', max([my_group[person]['age'] for person in my_group.keys() if my_group[person]['connections']]))
+print('The maximum age of people in the group that have at least one friend is', max([my_group[person]['age'] for person in my_group.keys() if 'friend' in my_group[person]['connections'].values()]))
