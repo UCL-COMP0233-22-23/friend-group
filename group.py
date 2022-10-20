@@ -6,11 +6,11 @@ my_group = "Paul Nathan and Sheila Perez"
 
 
 class Friend:
-    def _init__(self,name,age,job,relations):
+    def _init__(self,name,age,job):
         self.name = name
         self.age = age
         self.job = job
-        self.relations = {}
+        self.relations= {}
 
     def add_relation(self,friend,relation):
         self.relations[friend] = relation
