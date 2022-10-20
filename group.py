@@ -50,13 +50,47 @@ Relationships = [
                 ]
                 # added inverse role if reciprocal is false.
 
-inverses = {}
-def inverse_add(dic,a,b):
-    dic[a]=b
-    dic[b]=a
-inverse_add(inverses, 'Landlord', 'Tenant')
-inverse_add(inverses, 'Parent', 'Child')
-inverse_add(inverses, 'Grandparent', 'Grandchild')
+# A list of all people
+People = [Jill, Zalika, John, Nash] 
 
+# the maximum age of people in the group
+max_age = 0
+for p in People:
+    if p["Age"] > max_age:
+        max_age = p["Age"]
+print(max_age)
 
+# the average (mean) number of relations among members of the group
+def count_relations(person):
+    total = 0
+    for r in Relationships:
+        if r["PersonA"] == person or r["PersonB"] == person:
+            total += 1
+    return total
 
+total_relations = 0
+for p in People:
+    total_relations += count_relations(p)
+
+print(total_relations / len(People))
+
+# the maximum age of people in the group that have at least one relation
+max_age = 0
+for p in People:
+    if p["Age"] > max_age and count_relations(p) > 0:
+        max_age = p["Age"]
+print(max_age)
+
+# the maximum age of people in the group that have at least one friend
+def count_friends(person):
+    total = 0
+    for r in Relationships:
+        if (r["PersonA"] == person or r["PersonB"] == person) and r["RelationType"] == "Friend":
+            total += 1
+    return total
+
+max_age = 0
+for p in People:
+    if p["Age"] > max_age and count_friends(p) > 0:
+        max_age = p["Age"]
+print(max_age)
