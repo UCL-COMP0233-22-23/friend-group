@@ -16,7 +16,6 @@ class Friend:
         self.relations[friend] = relation
 
 
-    
 
 jill = Friend('Jill','26','Biologist',{'Zalika':'friend','John':'partner'})
 zalika = Friend('Zalika','28','Artist',{'Jill':'friend'})
