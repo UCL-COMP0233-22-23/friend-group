@@ -12,7 +12,9 @@ class Person:
         self.relationship = relationship
 
 Jill = Person('Jill','26','biologist',[['friend','Zalika'],['partner','John']])
+
 print(Jill.name)
 print(Jill.relationship)
+print(Jill.job)
 #my_group = {['Name':'Jill', 'age':'26','job':'biologist','friend':'Zalika','partner':'John'],['Name':'Zalika','age':'28','job':'artist','friend':'Jill'],['Name':'John','job':'writer','partner':'Jill'],['Name':'Nash','job':'chef','cousin':'John','tenant':'Zalika']}
 #print(my_group)
