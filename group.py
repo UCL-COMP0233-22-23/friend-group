@@ -1,8 +1,5 @@
 """An example of how to represent a group of acquaintances in Python."""
 
-my_dictionary = {'key1': 1, 'key4': 'abc'}
-my_dictionary['key1']
-my_dictionary['key4']
 
 my_group = {
     'Zhenghao': {
@@ -13,4 +10,4 @@ my_group = {
     }
 }
 
-print(my_group['Zhenghao']['name'], 'is', my_group['Zhenghao']['age'])
+print(my_group['Zhenghao'], 'is', my_group['Zhenghao']['age'])
