@@ -3,36 +3,44 @@
 # Your code to go here...
 
 my_group = {
-            'Raj': {
-                'age': 21,
-                'job': 'checkout_supervisor',
+            'Jill': {
+                'age': 26,
+                'job': 'biologist',
                 'connections': {
-                    'Surabhi': 'friend',
-                    'Shameer': 'friend'
+                    'Zalika': 'friend',
+                    'John': 'partner'
                     }
             }
             
             , 
             
-            'Surabhi': {
-                'age': 21,
-                'job': 'data_analyst',
+            'Zalika': {
+                'age': 28,
+                'job': 'artist',
                 'connections': {
-                    'Raj': 'friend',
-                    'Shameer': 'friend'
+                    'Jill': 'friend',
                 }
             }, 
             
-            'Shameer' : {
-                'age': 21,
-                'job': 'tutor',
+            'John' : {
+                'age': 27,
+                'job': 'writer',
                 'connections': {
-                    'Surabhi': 'friend',
-                    'Raj': 'friend'
+                    'Jill': 'partner',
+                    } 
+            },
+            
+            'Nash' : {
+                'age': 34,
+                'job': 'chef',
+                'connections': {
+                    'John': 'cousin',
+                    'Zalika': 'landlord'
                     } 
             }
-            
             
         
     }
         
+
+
