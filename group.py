@@ -2,6 +2,9 @@
 
 # Your code to go here...
 
+from statistics import mean
+
+
 my_group = [
     {
         'name' : 'Jill',
@@ -39,4 +42,7 @@ my_group = [
     }
 ]
 
-
+print('The maximum age is ' + str(max(person['age'] for person in my_group)))
+print('The mean number of relations is ' + str(mean(len(person['connections']) for person in my_group)))
+print('The maximum age of people with at least one relation is ' + str(max(person['age'] for person in my_group if person['connections'])))
+print('The maximum age of people with at least one friend is ' + str(max(person['age'] for person in my_group if 'friend' in person['connections'])))
