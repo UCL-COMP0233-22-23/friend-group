@@ -6,7 +6,7 @@ my_group = "Paul Nathan and Sheila Perez"
 
 
 class Friend:
-    def _init__(self,name,age,job):
+    def __init__(self,name,age,job):
         self.name = name
         self.age = age
         self.job = job
@@ -15,13 +15,27 @@ class Friend:
     def add_relation(self,friend,relation):
         self.relations[friend] = relation
 
+    def get_age(self):
+        return self.age
+
+    def get_job(self):
+        return self.job 
+
+    def get_relations(self):
+        return self.relations 
 
 
-jill = Friend('Jill','26','Biologist',{'Zalika':'friend','John':'partner'})
-zalika = Friend('Zalika','28','Artist',{'Jill':'friend'})
-john = Friend('John','27','Writer',{'Jill':'partner'})
-nash = Friend('Nash','34','Chef',{'John':'cousin','Zalika':'landlord'})
 
+jill = Friend('Jill','26','Biologist')
+zalika = Friend('Zalika','28','Artist')
+john = Friend('John','27','Writer')
+nash = Friend('Nash','34','Chef')
 
+jill.add_relation('Zalika','friend')
+jill.add_relation('John','partner')
+zalika.add_relation('Jill','friend')
+john.add_relation('Jill','partner')
+nash.add_relation('John','cousin')
+nash.add_relation('Zalika','landlord')
 
 
