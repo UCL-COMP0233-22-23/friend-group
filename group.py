@@ -8,5 +8,6 @@ friends_dict = {
 }
 
 #my_group =
-
-print(friends_dict)
+for key in friends_dict:
+    print(key, friends_dict[key][0])
+print("")
