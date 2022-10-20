@@ -40,4 +40,29 @@ my_group = {
     }
 
 }
-print(my_group)
+# print(my_group)
+
+class person:
+    def __init__(self,name, age, job=None):
+        self.name = name
+        self.age = age
+        self.job = job
+        self.relation = {}
+
+    def add_relation(self, name, relationship):
+        self.relation[relationship] = name
+
+Jill = person('Jill', 26, 'biologist')
+Jill.add_relation('Zalika', 'friend')
+Jill.add_relation('John', 'partner')
+
+Zalika = person('Zalika', 28, 'artist')
+Zalika.add_relation('Jill', 'friend')
+
+John = person('John', 27, 'writer')
+John.add_relation('Jill', 'partner')
+
+Nash = person('Nash', 34, 'Chef')
+Nash.add_relation('John', 'Cousin')
+Nash.add_relation('Zalika', 'landlord')
+print(Nash.relation)
