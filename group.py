@@ -6,4 +6,3 @@ my_group =
 
 # Charlie
 # - Checking I can push.
-# - Now checking i am on correct tree
