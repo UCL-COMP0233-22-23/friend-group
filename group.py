@@ -46,5 +46,6 @@ Relationships = [
                     {"PersonA" : Jill, "PersonB" : Zalika, "RelationType" : "Friend", "Reciprocal" : True},
                     {"PersonA" : Jill, "PersonB" : John, "RelationType" : "Partner", "Reciprocal" : True},
                     {"PersonA" : Nash, "PersonB" : John, "RelationType" : "Cousin", "Reciprocal" : True},
-                    {"PersonA" : Nash, "PersonB" : Zalika, "RelationType" : "Landlord", "Reciprocal" : False},
+                    {"PersonA" : Nash, "PersonB" : Zalika, "RelationType" : "Landlord", "Reciprocal" : False, 'Inverse' : 'Tenant'},
                 ]
+                # added inverse role if reciprocal is false.
