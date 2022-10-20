@@ -46,6 +46,17 @@ Relationships = [
                     {"PersonA" : Jill, "PersonB" : Zalika, "RelationType" : "Friend", "Reciprocal" : True},
                     {"PersonA" : Jill, "PersonB" : John, "RelationType" : "Partner", "Reciprocal" : True},
                     {"PersonA" : Nash, "PersonB" : John, "RelationType" : "Cousin", "Reciprocal" : True},
-                    {"PersonA" : Nash, "PersonB" : Zalika, "RelationType" : "Landlord", "Reciprocal" : False, 'Inverse' : 'Tenant'},
+                    {"PersonA" : Nash, "PersonB" : Zalika, "RelationType" : "Landlord", "Reciprocal" : False},
                 ]
                 # added inverse role if reciprocal is false.
+
+inverses = {}
+def inverse_add(dic,a,b):
+    dic[a]=b
+    dic[b]=a
+inverse_add(inverses, 'Landlord', 'Tenant')
+inverse_add(inverses, 'Parent', 'Child')
+inverse_add(inverses, 'Grandparent', 'Grandchild')
+
+
+
