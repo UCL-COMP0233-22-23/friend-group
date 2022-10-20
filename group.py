@@ -2,4 +2,5 @@
 
 # Your code to go here...
 
-my_group =
+my_group = {'namae':'Jill','job':'biologist','age':'26','connection':"Zalika's friend and John's partner"}
+
