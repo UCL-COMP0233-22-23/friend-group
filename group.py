@@ -12,30 +12,30 @@ my_group = {
         }
     },
     "Zalika" : {
-    "name": "Zalika",
-    "age": "28",
-    "job": "artist",
-    "connection": {
-        "friend": "Jill",
-        "partner": ""
+        "name": "Zalika",
+        "age": "28",
+        "job": "artist",
+        "connection": {
+            "friend": "Jill",
+            "partner": ""
         }
     },
     "John" : {
-    "name": "John",
-    "age": "27",
-    "job": "writer",
-    "connection": {
-        "friend": "",
-        "partner": "Jill"
+        "name": "John",
+        "age": "27",
+        "job": "writer",
+        "connection": {
+            "friend": "",
+            "partner": "Jill"
         }
     },
     "Nash" : {
-    "name": "Nash",
-    "age": "34",
-    "job": "chef",
-    "connection": {
-        "friend": "John",
-        "landlord": "Zalika"
+        "name": "Nash",
+        "age": "34",
+        "job": "chef",
+        "connection": {
+            "friend": "John",
+            "landlord": "Zalika"
         }
     }
 
