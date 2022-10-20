@@ -11,9 +11,10 @@ class Person:
 Jill=Person('Jill',26,{'friend':'Zalika','partner':'John'},'biologist')
 Zalika=Person('Zalika',28, {'friend':'Jill'},'artist')
 John=Person('John',27,{'partner':'Jill'},'writer')
+Nash=Person('Nash',34,{'cousin':'John','landlord':'Zalika'},'chef')
 
 
-my_group =[Jill,Zalika,John]
+my_group =[Jill,Zalika,John,Nash]
 
 
 def forget(person1, person2):
