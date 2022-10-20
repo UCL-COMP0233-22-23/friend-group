@@ -8,6 +8,9 @@ friends_dict = {
 }
 
 #my_group =
-for key in friends_dict:
-    print(key, friends_dict[key][0])
+for i in range(len(friends_dict)):
+    for key in friends_dict:
+        print(key, friends_dict[key][i])
+        if friends_dict[key][i] == "": # break empty list space
+                break
 print("")
