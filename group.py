@@ -10,6 +10,7 @@ class Person:
     
 Jill=Person('Jill',26,{'friend':'Zalika','partner':'John'},'biologist')
 Zalika=Person('Zalika',28, {'friend':'Jill'},'artist')
+John=Person('John',27,{'partner':'Jill'},'writer')
 
 
 my_group =[Jill,Zalika]
