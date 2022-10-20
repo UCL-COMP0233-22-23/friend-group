@@ -19,7 +19,7 @@ Create an example instance, in an editor or a notebook, of a structure for this 
 - Jill is 26, a biologist and she is Zalika's friend and John's partner.
 - Zalika is 28, an artist, and Jill's friend
 - John is 27, a writer, and Jill's partner.
-- Nash is 34, a chef, John's cousin and Zalika's landlord.
+- Nash is 34, a writer, John's cousin and Zalika's landlord.
 
 Some things you may wish to consider in your model:
 - Does it allow people who have no job?
