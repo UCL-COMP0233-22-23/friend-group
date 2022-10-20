@@ -31,9 +31,15 @@ my_group = {
     "Christopher": {
         "age": 27,
         "occupation": 'Consigliere',
-        "connection": 'He\'\s Tonys Nephew' 
+        "connection": 'He\'s Tony\'s Nephew' 
+    },
+    
+        "Jill": {
+        "age": 26,
+        "occupation": 'Biologist',
+        "connection": 'He\'s Tony\'s Nephew' 
     },
 }
 
-print(my_group["John"]["age"])
+print(my_group["Christopher"]["connection"])
 
