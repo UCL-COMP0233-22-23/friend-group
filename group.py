@@ -55,3 +55,10 @@ def average_age():
     for person in my_group:
         age += person["age"]
     return age / len(my_group)
+
+#summary data from the group
+print("The maximum age in the group is: ", max([person["age"] for person in my_group]))
+len_relations = [len(person["relations"]) for person in my_group]
+print("The average number of relations per person is: ", sum(len_relations) / len(len_relations))
+print("The maximum age of people in the group that have >= one relation is: ", max([person["age"] for person in my_group if len(person["relations"]) >= 1]))
+print("The maximum age of people in the group that have >= one friend is ", max([person["age"] for person in my_group if len(person["relations"]["friend"]) >= 1]))
