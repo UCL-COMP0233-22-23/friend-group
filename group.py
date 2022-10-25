@@ -22,3 +22,8 @@ my_group =[
         }
     }
 ]
+print(max(person["age"] for person in group.values()))  
+print(mean([len(person["relations"]) for person in group.values()]))  
+print(max(person["age"] for person in group.values() if person["relations"]))  
+print(max(person["age"] for person in group.values() if "friend" in person["relations"].values()))  
+
