@@ -1,3 +1,6 @@
+from distutils.file_util import write_file
+import json
+
 """An example of how to represent a group of acquaintances in Python."""
 
 my_group = [
@@ -39,3 +42,27 @@ list = [j for j in range(my_group.__len__())]
 
 #[more advanced] the maximum age of people in the group that have at least one friend
 [print(max(age)) for age in [[my_group[i]['age'] for i in list if ('friend' in [my_group[i]['relationship'][j][0] for j in range(my_group[i]['relationship'].__len__())])]]]
+
+
+
+
+#USE OF JASON FILES
+with open('my_group.json','w') as infile:
+    json.dump(my_group,infile,indent=4)
+    "Created the input file"
+with open('my_group.json') as infile_test:
+    my_group_string = infile_test.read()
+   
+#print(json.dumps(my_group))
+#print(json.dumps(my_group,indent=4))
+print(my_group_string)
+print('\n')
+
+# Method can be used to parse a valid JSON string and convert it into a Python Dictionary.
+my_group_test = json.loads(my_group_string) 
+
+print(my_group_test[0])
+print('\n')
+print(my_group[1]['job'])
+print('\n')
+print(my_group_test)
