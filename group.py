@@ -43,4 +43,45 @@ my_group = {
     }
         
 
+def max_age():
+    '''max age of people with atleast on connection'''
+    ages = []
+    for i in my_group:
+        age = my_group[i]['age']
 
+        ages.append(age)
+
+    return print(max(ages))
+
+
+def average_relations():
+    '''average number of connections in the group'''
+    average=[] #average number of connections per person
+    for i in my_group:
+        av = len(my_group[i]['connections'])
+        
+        average.append(av)
+        
+    tot_average = sum(average)/len(average) #total average number of relations
+
+    return print(tot_average)
+
+
+def max_age2():
+    '''max age of people with atleast on connection'''
+    ages = []
+    for i in my_group:
+        if len(my_group[i]['connections']) >0:
+            age = my_group[i]['age']
+
+            ages.append(age)
+
+    return print(max(ages))
+
+
+
+
+
+max_age()
+average_relations()
+max_age2()
