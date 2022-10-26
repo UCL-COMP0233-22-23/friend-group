@@ -1,12 +1,26 @@
-John = {
+group = {
+    
+    "John" : {
     'age' : 21,
     'job' :'student',
-    'connection' : ["Ann's friend","B's friend"] 
-    }
+    'connection' : {"Ann": "friend", "B":"friend"} 
+    }, 
 
-Ann = {
+    "Ann" : {
     'age' : 20,
     'job' : 'student',
-    'connection' : ["John's friedn"]
+    'connection' : {"John":" friend"}
+    },
+    
+    "Nash": {
+    "age": 34,
+    "job": "chef",
+    "connection": {"John": "cousin", "Zalika": "landlord"}
+    },
+    
+    "Zalika": {
+    "age": 28,
+    "job": "artist",
+    "relations": {"Ann": "cousin"}
+    },
 }
-
