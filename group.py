@@ -42,33 +42,3 @@ my_group = {
         
     }
         
-
-def max_age():
-    '''max age of people with atleast on connection'''
-    ages = [my_group[i]['age'] for i in my_group]
-
-    return print(max(ages))
-
-
-def average_relations():
-    '''average number of connections in the group'''
-    average=[len(my_group[i]['connections']) for i in my_group] #average number of connections per person
-        
-    tot_average = sum(average)/len(average) #total average number of relations
-
-    return print(tot_average)
-
-
-def max_age2():
-    '''max age of people with atleast on connection'''
-    ages = [my_group[i]['age'] for i in my_group if len(my_group[i]['connections']) >0]
-
-    return print(max(ages))
-
-
-
-
-
-max_age()
-average_relations()
-max_age2()
