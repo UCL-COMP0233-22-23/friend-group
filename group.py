@@ -33,3 +33,18 @@ group = {
         }
     }
 }
+
+
+import json
+
+json.dumps(group)
+print(json.dumps(group, indent=4))
+
+with open('myfile.json', 'r') as json_file:
+    my_data_as_string = json_file.read()
+
+# print(my_data_as_string)
+
+mydata = json.loads(my_data_as_string)
+print(mydata['somekey'])
+
