@@ -29,10 +29,24 @@ my_group = {
     },
     "Alex":{
         "age":22,
-         "job": "archeologist",
+        "job": "archeologist",
         "relations":{
-            "Jack": "partner",
-            "Alex": "friend"
+            #"Jack": "partner",
+            #"Alex": "friend"
         }
     }
 }
+
+agelist = []
+joblist = []
+relation = []
+for name, detail in my_group.items():
+    agelist += [detail["age"]]
+    joblist += [detail["job"]]
+    relation += [detail["relations"]]
+print(agelist)# print the age, job and relation of people
+print(joblist)#But this presentation does not allows people with no key of job or relatoion
+print(relation)#It can present the empty key of job and relation
+#ages = [properties["age"] for properties in my_group.values()] ---another way
+age_of_people_with_many_friends = [properties["age"] for properties in my_group.values() if len(properties["relations"])>=3]
+print(age_of_people_with_many_friends)
