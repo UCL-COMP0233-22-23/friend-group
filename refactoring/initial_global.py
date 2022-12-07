@@ -56,6 +56,6 @@ forget("Nash", "John")
 
 if __name__ == "__main__":
     assert len(group) == 4, "Group should have 4 members"
-    assert average_age() == 28.75, "Average age of the group is incorrect!"
+    assert average_age() == 28.75, " Average age of the group is incorrect!"
     assert len(group["Nash"]["relations"]) == 1, "Nash should only have one relation"
     print("All assertions have passed!")
