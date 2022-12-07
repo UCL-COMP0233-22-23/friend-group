@@ -12,11 +12,13 @@ class Person:
         """Add a new connection to a person"""
         if person in self.connections:
             raise ValueError(f"I already know about {person.name}")
+        # didn't know you can have objects as keys but i guess there's no reason
+        # not to
         self.connections[person] = relation
 
     def forget(self, person):
         """Removes any connections to a person"""
-        pass
+        del self.connections[person]
 
 
 def average_age(group):
@@ -28,10 +30,17 @@ def average_age(group):
 if __name__ == "__main__":
     # ...then create the group members one by one...
     jill = Person("Jill", 26, "biologist")
-
+    zalika = Person("Zalika", 28, "artist")
+    john = Person("John", 27, "writer")
+    nash = Person("nash", 34, "chef")
     # ...then add the connections one by one...
     # Note: this will fail from here if the person objects aren't created
     jill.add_connection(zalika, "friend")
+    jill.add_connection(john, "partner")
+    zalika.add_connection(jill, "friend")
+    john.add_connection(jill, "partner")
+    nash.add_connection(john, "cousin")
+    nash.add_connection(zalika, "landlord")
 
     # ... then forget Nash and John's connection
     nash.forget(john)
