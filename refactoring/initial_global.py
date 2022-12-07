@@ -51,7 +51,7 @@ if __name__ == "__main__":
     }
 
     add_person("Nash", 34, "chef", nash_relations,group)
-    forget("Nash", "John",group)
+    forget("Nash", "John", group)
 
     assert len(group) == 4, "Group should have 4 members"
     assert average_age(group) == 28.75, "Average age of the group is incorrect!"
