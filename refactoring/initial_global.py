@@ -4,6 +4,12 @@ def average_age(group):
     return sum(all_ages) / len(group)
 
 
+def forget(group, person1, person2):
+    """Remove the connection between two people."""
+    group[person1]["relations"].pop(person2, None)
+    group[person2]["relations"].pop(person1, None)
+
+
 def add_person(group, name, age, job, relations):
     """Add a new person with the given characteristics to the group."""
     new_person = {
@@ -12,12 +18,6 @@ def add_person(group, name, age, job, relations):
         "relations": relations
     }
     group[name] = new_person
-
-
-def forget(group, person1, person2):
-    """Remove the connection between two people."""
-    group[person1]["relations"].pop(person2, None)
-    group[person2]["relations"].pop(person1, None)
 
 
 def add_nash(group):

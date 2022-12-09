@@ -26,17 +26,17 @@ class Group:
         """
         return any(member.name == name for member in self.members)
 
-    def number_of_connections(self, name):
-        """Find the number of connections that a person in the group has"""
-        if not self.contains(name):
-            raise ValueError(f"I don't know about {name}.")
-        return sum(1 for (first, second) in self.connections if first == name)
-
     def add_person(self, name, age, job):
         """Add a new person with the given characteristics to the group."""
         if self.contains(name):
             raise ValueError(f"I already know about {name}.")
         self.members.append(Person(name, age, job))
+
+    def number_of_connections(self, name):
+        """Find the number of connections that a person in the group has"""
+        if not self.contains(name):
+            raise ValueError(f"I don't know about {name}.")
+        return sum(1 for (first, second) in self.connections if first == name)
 
     def connect(self, name1, name2, relation, reciprocal=True):
         """Connect two given people in a particular way.
@@ -85,6 +85,7 @@ if __name__ == "__main__":
     # ... then forget Nash and John's connection
     my_group.forget("Nash", "John")
 
+    assert my_group.contains("John"), "John should be in the group"
     assert my_group.size() == 4, "Group should have 4 members"
     assert my_group.average_age() == 28.75, "Average age of the group is incorrect!"
     assert my_group.number_of_connections("Nash") == 1, "Nash should only have one relation"
